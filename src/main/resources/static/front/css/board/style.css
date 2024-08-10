@@ -1,0 +1,15 @@
+.buttons {
+   left-margin: 350px;
+   padding: 30px;
+}
+
+table.list {
+    border-spacing: 0;
+    width: 50%;
+    border: 1px solid #000;
+}
+
+table.list td {
+    border-right: 1px solid #000;
+    border-bottom: 1px solid #000;
+}

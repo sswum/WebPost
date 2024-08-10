@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{/layouts/main}">
+
+<main layout:fragment="content">
+        <h2 th:text="#{게시글 목록}"></h2>
+
+
+                <table class=list border="1">
+                        <thead>
+                        <tr>
+                                <th>제목</th>
+                                <th>글쓴이</th>
+                        </tr>
+                        </thead>
+                <tbody>
+                <tr th:unless="${items == null || items.isEmpty()}">
+                <tr th:each="item : ${items}" th:object="${item}">
+                        <td>
+                                <a th:href="@{/board/view/{seq}(seq=*{seq})}">
+                                        <span th:text="*{title}"></span>
+                                </a>
+                        </td>
+                        <td th:text="*{name}"></td>
+                </tr>
+                </tr>
+                <tr th:if="${items == null || items.isEmpty()}">
+                        <td colspan="2">게시물이 없습니다.</td>
+                </tr>
+                </tbody>
+                </table>
+
+
+        <div class="buttons" >
+                <a class=left-mar th:href="@{/board/write}">글쓰기</a>
+        </div>
+        </form>
+</main>
+</html>
