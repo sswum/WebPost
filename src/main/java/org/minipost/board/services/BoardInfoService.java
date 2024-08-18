@@ -47,7 +47,7 @@ public class BoardInfoService {
         // ALL - 통합 검색 ( title + name + content ) title : 제목 , name : 작성자 , content: 내용 , SUBJECT_CONTENT : 제목 + 내용
         String sopt = search.getSopt();
         String skey = search.getSkey();
-        sopt = StringUtils.hasText(sopt) ? sopt : "ALL";
+        sopt = StringUtils.hasText(sopt) ? sopt : "ALL"; //검색 옵션을 선택하면 해당 옵션을 : 아니면 ALL옵션으로 보여줘라
 
         QBoard board = QBoard.board;
 

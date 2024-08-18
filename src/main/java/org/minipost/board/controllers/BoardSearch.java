@@ -7,7 +7,7 @@ public class BoardSearch { //페이지 시작 범위부터 최대 페이지수 �
     private int page = 1;
     private int limit = 20;
 
-    private String sopt;
-    private String skey;
+    private String sopt; //검색 옵션
+    private String skey; //검색 키워드
 
 }
